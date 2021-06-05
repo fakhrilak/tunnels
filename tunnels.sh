@@ -6,7 +6,7 @@ tmux has-session -t $SESSIONNAME1 &> /dev/null
 if [ $? != 0 ] 
  then
     tmux new-session -s $SESSIONNAME1 -n tunnels1 -d
-    tmux send-keys -t $SESSIONNAME1 "cd /root/bot_tunnels" C-m
+    tmux send-keys -t $SESSIONNAME1 "cd /root/tunnels" C-m
     tmux send-keys -t $SESSIONNAME1 "export FLASK_APP=tunnles.py" C-m
     tmux send-keys -t $SESSIONNAME1 "export FLASK_ENV=development" C-m
     tmux send-keys -t $SESSIONNAME1 "flask run --host '0.0.0.0' --port 6001" C-m
