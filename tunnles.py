@@ -15,14 +15,9 @@ def tunnels():
     uri_local = "\nlocal URL's: \n'"
 
     for i in datajson['tunnels']:
-        msg = msg + i['public_url'] + "\n\n"
+        msg = i['public_url']
         uri_local = "\nlocal URL's: \n'" + i["config"]["addr"]
-    return (
-        {
-            "msg" : msg,
-            "uri": uri_local
-        }
-    )
+    return msg
 
 
 
